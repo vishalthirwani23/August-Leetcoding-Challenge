@@ -1,0 +1,24 @@
+https://leetcode.com/explore/challenge/card/august-leetcoding-challenge/549/week-1-august-1st-august-7th/3410/
+Code:
+
+class MyHashSet {
+public:
+    
+    vector<int> hash;
+    MyHashSet() {
+        hash.resize(1000001,0);
+    }
+    
+    void add(int key) {
+        hash[key]=1;
+    }
+    
+    void remove(int key) {
+        hash[key]=0;
+    }
+    
+    bool contains(int key) {
+        return hash[key];
+    }
+};
+
