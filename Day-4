@@ -1,0 +1,24 @@
+https://leetcode.com/explore/challenge/card/august-leetcoding-challenge/549/week-1-august-1st-august-7th/3411/
+Code:
+
+class Solution {
+public:
+    bool isPalindrome(string s) {
+       
+        int n=s.length(),start=0,end=n-1;
+        while(start<end){
+           
+            while(start<end && !isalnum(s[start])){
+                start++;
+            };
+            
+            while(start<end && !isalnum(s[end])){
+                end--;
+            };
+             if(s[start]!=s[end] && toupper(s[start])!=toupper(s[end])) return false;
+             start++;
+             end--;
+        }
+        return true;
+    }
+};
